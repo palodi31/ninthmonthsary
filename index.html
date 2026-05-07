@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A romantic ninth monthsary static website with love messages, snapshots, reminders, and a date checklist.">
+  <title>Happy 9th Monthsary, My Babi</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Dancing+Script:wght@600;700&family=Nunito:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient-bg" aria-hidden="true">
+    <span class="glow glow-one"></span>
+    <span class="glow glow-two"></span>
+    <span class="glow glow-three"></span>
+    <span class="floating floating-heart-one">&#9829;</span>
+    <span class="floating floating-heart-two">&#10022;</span>
+    <span class="floating floating-heart-three">&#9829;</span>
+  </div>
+
+  <header class="site-header">
+    <nav class="navbar navbar-expand container py-3">
+      <a class="navbar-brand brand-mark" href="#home" data-route="homeView" aria-label="Back to homepage">
+        <span class="brand-icon">9</span>
+        <span>
+          <strong>Ninth Monthsary</strong>
+          <small>for my babi</small>
+        </span>
+      </a>
+      <div class="ms-auto d-flex align-items-center gap-2">
+        <button class="btn btn-sm soft-pill" type="button" id="sparkleButton">
+          <i class="bi bi-stars"></i>
+          Sprinkle love
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container app-shell">
+    <section id="homeView" class="view is-active" aria-labelledby="homeTitle">
+      <div class="hero-card text-center">
+        <span class="eyebrow"><i class="bi bi-heart-fill"></i> Happy 9th Monthsary</span>
+        <h1 id="homeTitle">For the girl who makes every ordinary day feel like magic.</h1>
+        <p class="hero-copy mx-auto">
+          A tiny love homepage made just for you, filled with messages, memories, reminders,
+          and all the sweet little plans waiting for us when we finally meet.
+        </p>
+        <div class="hero-actions justify-content-center">
+          <button class="btn primary-love-btn" type="button" data-route="messagesView">
+            Open my heart <i class="bi bi-arrow-through-heart-fill"></i>
+          </button>
+          <button class="btn ghost-love-btn" type="button" data-route="checklistView">
+            See our future plans <i class="bi bi-check2-heart"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="score-intro text-center">
+        <span class="section-kicker">Choose a love card</span>
+        <h2>Our little monthsary home</h2>
+        <p>Tap any scorecard. The homepage cards will step aside so each section can shine on its own.</p>
+      </div>
+
+      <div class="row g-4 score-grid" aria-label="Monthsary sections">
+        <div class="col-12 col-md-6 col-xl-3">
+          <article class="score-card card-message" data-route="messagesView" tabindex="0" role="button" aria-label="Open messages section">
+            <div class="score-topline">
+              <span class="score-badge">01</span>
+              <i class="bi bi-envelope-heart"></i>
+            </div>
+            <h3>Messages</h3>
+            <p>Elegant, sparkly, and soft - like a letter wrapped in perfume and moonlight.</p>
+            <div class="score-meter" aria-hidden="true"><span style="width: 96%"></span></div>
+            <footer>Love letter score <strong>infinite</strong></footer>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-6 col-xl-3">
+          <article class="score-card card-snapshots" data-route="snapshotsView" tabindex="0" role="button" aria-label="Open snapshots section">
+            <div class="score-topline">
+              <span class="score-badge">02</span>
+              <i class="bi bi-camera-heart"></i>
+            </div>
+            <h3>This Month's Snapshots</h3>
+            <p>Polaroid-style memories hanging on a dreamy little clothesline.</p>
+            <div class="score-meter" aria-hidden="true"><span style="width: 91%"></span></div>
+            <footer>Memory score <strong>9/9</strong></footer>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-6 col-xl-3">
+          <article class="score-card card-reminders" data-route="remindersView" tabindex="0" role="button" aria-label="Open daily reminders section">
+            <div class="score-topline">
+              <span class="score-badge">03</span>
+              <i class="bi bi-sticky"></i>
+            </div>
+            <h3>Daily Reminders</h3>
+            <p>Cute sticky notes for the days she needs a tiny hug from the screen.</p>
+            <div class="score-meter" aria-hidden="true"><span style="width: 94%"></span></div>
+            <footer>Care score <strong>always</strong></footer>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-6 col-xl-3">
+          <article class="score-card card-checklist" data-route="checklistView" tabindex="0" role="button" aria-label="Open fun things checklist section">
+            <div class="score-topline">
+              <span class="score-badge">04</span>
+              <i class="bi bi-clipboard2-heart"></i>
+            </div>
+            <h3>Fun Things Soon</h3>
+            <p>A school-notebook checklist of dates, hugs, snacks, and future stories.</p>
+            <div class="score-meter" aria-hidden="true"><span style="width: 99%"></span></div>
+            <footer>Date quest score <strong>ready</strong></footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="messagesView" class="view section-view" aria-labelledby="messagesTitle">
+      <button class="btn back-home" type="button" data-route="homeView"><i class="bi bi-arrow-left"></i> Back to homepage</button>
+      <div class="section-heading glam-heading text-center">
+        <span class="section-kicker">Section 01</span>
+        <h2 id="messagesTitle">Messages for my prettiest home</h2>
+        <p>Soft, glamorous, and a little dramatic - because loving her deserves sparkle.</p>
+      </div>
+
+      <div class="letter-wrap">
+        <div class="letter-ribbon" aria-hidden="true"></div>
+        <article class="love-letter">
+          <div class="wax-seal" aria-hidden="true">9</div>
+          <p class="script-line">Hello, my love.</p>
+          <h3>Happy ninth monthsary, my babi.</h3>
+          <p>
+            Nine months of choosing you, missing you, admiring you, and falling for all the little
+            things that make you you. You are my favorite notification, my safest thought, and the
+            sweetest part of days that feel heavy.
+          </p>
+          <p>
+            I love the way you exist: pretty without trying, kind without announcing it, and strong
+            even on days when you feel soft. You make ordinary moments feel like something I should
+            keep forever.
+          </p>
+          <p>
+            Thank you for being my peace, my favorite person, and my beautiful reason to look forward
+            to tomorrow. I hope this little website makes you smile the way your smile fixes my whole day.
+          </p>
+          <div class="letter-signature">
+            <span>Forever your biggest fan,</span>
+            <strong>Your love</strong>
+          </div>
+        </article>
+      </div>
+
+      <div class="row g-4 mini-vows">
+        <div class="col-md-4">
+          <div class="vow-card">
+            <i class="bi bi-stars"></i>
+            <h4>I promise</h4>
+            <p>to remind you how loved you are, especially on days you forget.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="vow-card">
+            <i class="bi bi-moon-stars"></i>
+            <h4>I promise</h4>
+            <p>to keep choosing you gently, loudly, and with my whole heart.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="vow-card">
+            <i class="bi bi-balloon-heart"></i>
+            <h4>I promise</h4>
+            <p>to make our future feel cute, safe, and full of tiny celebrations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="snapshotsView" class="view section-view" aria-labelledby="snapshotsTitle">
+      <button class="btn back-home" type="button" data-route="homeView"><i class="bi bi-arrow-left"></i> Back to homepage</button>
+      <div class="section-heading text-center">
+        <span class="section-kicker">Section 02</span>
+        <h2 id="snapshotsTitle">This month's snapshots</h2>
+        <p>Replace the placeholders with real photos by editing each <code>data-photo</code> path in the HTML.</p>
+      </div>
+
+      <div class="snapshot-stage">
+        <div class="clothesline" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div class="row g-4 snapshot-grid">
+          <div class="col-12 col-md-6 col-xl-4">
+            <article class="polaroid tilt-left">
+              <span class="clip"></span>
+              <div class="polaroid-photo photo-pink" data-photo="">
+                <i class="bi bi-image"></i><span>Add photo</span>
+              </div>
+              <h3>Favorite smile</h3>
+              <p>The kind of smile I would save in my pocket.</p>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-xl-4">
+            <article class="polaroid tilt-right">
+              <span class="clip"></span>
+              <div class="polaroid-photo photo-lavender" data-photo="">
+                <i class="bi bi-camera"></i><span>Add photo</span>
+              </div>
+              <h3>Tiny moment</h3>
+              <p>One ordinary second that became special because of you.</p>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-xl-4">
+            <article class="polaroid tilt-soft-left">
+              <span class="clip"></span>
+              <div class="polaroid-photo photo-peach" data-photo="">
+                <i class="bi bi-chat-heart"></i><span>Add photo</span>
+              </div>
+              <h3>Sweet chat</h3>
+              <p>Proof that your messages can make my heart do cartwheels.</p>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-xl-4">
+            <article class="polaroid tilt-soft-right">
+              <span class="clip"></span>
+              <div class="polaroid-photo photo-blue" data-photo="">
+                <i class="bi bi-cloud-sun"></i><span>Add photo</span>
+              </div>
+              <h3>Something I saw</h3>
+              <p>A little view I wanted to show you immediately.</p>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-xl-4">
+            <article class="polaroid tilt-left">
+              <span class="clip"></span>
+              <div class="polaroid-photo photo-mint" data-photo="">
+                <i class="bi bi-cup-hot"></i><span>Add photo</span>
+              </div>
+              <h3>Food date idea</h3>
+              <p>For the yummy things we will try together soon.</p>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-xl-4">
+            <article class="polaroid tilt-right">
+              <span class="clip"></span>
+              <div class="polaroid-photo photo-gold" data-photo="">
+                <i class="bi bi-hearts"></i><span>Add photo</span>
+              </div>
+              <h3>Us, soon</h3>
+              <p>The placeholder I am most excited to replace.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="remindersView" class="view section-view" aria-labelledby="remindersTitle">
+      <button class="btn back-home" type="button" data-route="homeView"><i class="bi bi-arrow-left"></i> Back to homepage</button>
+      <div class="section-heading text-center sticky-heading">
+        <span class="section-kicker">Section 03</span>
+        <h2 id="remindersTitle">Daily reminders for my babi</h2>
+        <p>Little notes for every day she deserves comfort, confidence, and sweetness.</p>
+        <button class="btn primary-love-btn mini" type="button" id="randomReminder">
+          Pick one reminder <i class="bi bi-magic"></i>
+        </button>
+      </div>
+
+      <div class="sticky-board" aria-live="polite">
+        <article class="sticky-note note-yellow">
+          <span class="pin"></span>
+          <h3>Drink water, pretty girl.</h3>
+          <p>Your body deserves care, even on busy days.</p>
+        </article>
+        <article class="sticky-note note-pink">
+          <span class="pin"></span>
+          <h3>Rest your eyes.</h3>
+          <p>You do not have to earn rest. You deserve it.</p>
+        </article>
+        <article class="sticky-note note-blue">
+          <span class="pin"></span>
+          <h3>You are loved.</h3>
+          <p>Quiet days, messy days, sleepy days - still loved.</p>
+        </article>
+        <article class="sticky-note note-mint">
+          <span class="pin"></span>
+          <h3>I am proud of you.</h3>
+          <p>Even your small efforts matter more than you know.</p>
+        </article>
+        <article class="sticky-note note-lilac">
+          <span class="pin"></span>
+          <h3>Eat something yummy.</h3>
+          <p>Future me wants to treat you to all your cravings.</p>
+        </article>
+        <article class="sticky-note note-coral">
+          <span class="pin"></span>
+          <h3>Breathe, baby.</h3>
+          <p>One thing at a time. I am always cheering for you.</p>
+        </article>
+        <article class="sticky-note note-cream">
+          <span class="pin"></span>
+          <h3>You are beautiful.</h3>
+          <p>Not just in photos. In the way you think and care too.</p>
+        </article>
+        <article class="sticky-note note-rose">
+          <span class="pin"></span>
+          <h3>I miss you cutely.</h3>
+          <p>Like a song stuck in my head, but softer.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="checklistView" class="view section-view" aria-labelledby="checklistTitle">
+      <button class="btn back-home" type="button" data-route="homeView"><i class="bi bi-arrow-left"></i> Back to homepage</button>
+      <div class="section-heading text-center">
+        <span class="section-kicker">Section 04</span>
+        <h2 id="checklistTitle">Fun things we will do once we meet</h2>
+        <p>A cute school-notebook checklist for our future date adventures.</p>
+      </div>
+
+      <div class="notebook-card">
+        <div class="notebook-header">
+          <div>
+            <span class="label-chip">Date Quest</span>
+            <h3>Our meet-up checklist</h3>
+          </div>
+          <div class="progress-wrap" aria-label="Checklist progress">
+            <span id="progressText">0/10 done</span>
+            <div class="progress love-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+              <div id="progressBar" class="progress-bar" style="width: 0%"></div>
+            </div>
+          </div>
+        </div>
+
+        <ol class="date-checklist">
+          <li><label><input type="checkbox" data-task="hug"><span>Have our long finally-together hug.</span></label></li>
+          <li><label><input type="checkbox" data-task="drink"><span>Buy you your favorite drink.</span></label></li>
+          <li><label><input type="checkbox" data-task="photo"><span>Take our first monthly photo together.</span></label></li>
+          <li><label><input type="checkbox" data-task="walk"><span>Have a slow walk while holding hands.</span></label></li>
+          <li><label><input type="checkbox" data-task="food"><span>Try street food or a cozy snack date.</span></label></li>
+          <li><label><input type="checkbox" data-task="arcade"><span>Win something cute at an arcade or booth.</span></label></li>
+          <li><label><input type="checkbox" data-task="movie"><span>Watch a movie and share snacks.</span></label></li>
+          <li><label><input type="checkbox" data-task="study"><span>Do a study-cafe or quiet cafe date.</span></label></li>
+          <li><label><input type="checkbox" data-task="letter"><span>Write one tiny letter before the day ends.</span></label></li>
+          <li><label><input type="checkbox" data-task="promise"><span>Make a new promise for our next monthsary.</span></label></li>
+        </ol>
+
+        <div class="notebook-footer">
+          <p><i class="bi bi-pencil-heart"></i> Note: This checklist saves on the same browser, so she can tick things off later.</p>
+          <button class="btn ghost-love-btn mini" type="button" id="resetChecklist">Reset checklist</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-love text-center">
+    <div class="container">
+      Made with all my love for our ninth monthsary <span aria-hidden="true">&hearts;</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
